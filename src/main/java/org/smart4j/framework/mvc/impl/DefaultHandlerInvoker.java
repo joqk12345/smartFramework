@@ -86,6 +86,8 @@ public class DefaultHandlerInvoker implements HandlerInvoker {
                 paramList.add(CastUtil.castDouble(param));
             } else if (ClassUtil.isString(paramType)) {
                 paramList.add(param);
+            } else {
+                throw new Exception("Unsupport paramater type:" + paramType);
             }
         }
         // 返回参数列表
